@@ -1,0 +1,16 @@
+{
+  "name": "chpdesign/booklog-api",
+  "description": "Booklog api library",
+  "require": {
+    "php": ">=7.2.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Booklog\\Api\\": [
+        ""
+      ]
+    }
+  }
+}
