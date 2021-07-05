@@ -76,6 +76,39 @@ class BooklogStore extends BooklogApi
     }
 
     /**
+     * Termék(ek) ellenörzése egy rendelésen belül
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function checkItems($data)
+    {
+        return $this->sendRequest("storeorder.checkItems", $data);
+    }
+
+    /**
+     * kiszedés eltérés elfogadása
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function acceptMismatch($data)
+    {
+        return $this->sendRequest("storeorder.acceptMismatch", $data);
+    }
+
+    /**
+     * kiszedés eltérés vissza küldése felülvizsgálásra
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function modifyMismatch($data)
+    {
+        return $this->sendRequest("storeorder.modifyMismatch", $data);
+    }
+
+    /**
      * Dokumentum hozzáadása egy rendeléshez, mondjuk számla vagy szállító levél
      * @param $orderId
      * @param $file
@@ -186,6 +219,28 @@ class BooklogStore extends BooklogApi
     public function getOrderStatus($data)
     {
         return $this->sendRequest("storeorder.getOrderStatus", $data);
+    }
+
+    /**
+     * Reklamáció létrehozása
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function createClaim($data)
+    {
+        return $this->sendRequest("storeorder.createClaim", $data);
+    }
+
+    /**
+     * Reklamáció lezárása
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function closeClaim($data)
+    {
+        return $this->sendRequest("storeorder.closeClaim", $data);
     }
 
     protected function sendRequest($action, $data)
