@@ -65,6 +65,17 @@ class BooklogStore extends BooklogApi
     }
 
     /**
+     * Raktári rendelés egyedi/custom azonosítójának beállítása
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function updatePid($data)
+    {
+        return $this->sendRequest("storeorder.updatePid", $data);
+    }
+
+    /**
      * Termék(ek) frissítése egy rendelésen belül
      * @param $data
      * @return mixed
