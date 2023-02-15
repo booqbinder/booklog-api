@@ -6,11 +6,11 @@ use Booklog\Api\BooklogApi;
 use Booklog\Api\BooklogApiException;
 
 /**
- * Booklog szállítás létrehozó osztály
- * Class BooklogShipping
+ * Booklog személyes átvétel osztály
+ * Class BooklogWarehousePickup
  * @package Booklog\Api\Shipping
  */
-class BooklogShipping extends BooklogApi
+class BooklogWarehousePickup extends BooklogApi
 {
 
     /**
@@ -21,7 +21,7 @@ class BooklogShipping extends BooklogApi
      */
     public function createOrder($data)
     {
-        $data["serviceprovider_type"] = "booklog_shipping";
+        $data["serviceprovider_type"] = "booklog_warehouse_pickup";
         try {
             $reqparams = [
                 "action" => "shippingorder.create",
