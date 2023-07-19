@@ -10,26 +10,7 @@ use Booklog\Api\BooklogApiException;
  * Class BooklogWarehousePickup
  * @package Booklog\Api\Shipping
  */
-class BooklogWarehousePickup extends BooklogApi
+class BooklogWarehousePickup extends BooklogShipping
 {
-
-    /**
-     * Szállítás létrehozása
-     * @param $data
-     * @return mixed
-     * @throws BooklogShippingException
-     */
-    public function createOrder($data)
-    {
-        $data["serviceprovider_type"] = "booklog_warehouse_pickup";
-        try {
-            $reqparams = [
-                "action" => "shippingorder.create",
-                "data" => $data
-            ];
-            return $this->makeApiCall($reqparams);
-        } catch (BooklogApiException $e) {
-            throw new BooklogShippingException($e->getMessage(), $e->getCode(), $e);
-        }
-    }
+    protected static $type = "booklog_warehouse_pickup";
 }
