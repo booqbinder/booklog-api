@@ -39,7 +39,7 @@ class BooklogStore extends BooklogApi
      */
     public function createStoreOrder($data)
     {
-        return $this->sendRequest("storeorder.create", $data);
+        return $this->sendRequest("BooklogStoreOrder.create", $data);
     }
 
     /**
@@ -50,7 +50,7 @@ class BooklogStore extends BooklogApi
      */
     public function closeStoreOrder($data)
     {
-        return $this->sendRequest("storeorder.closeOrder", $data);
+        return $this->sendRequest("BooklogStoreOrder.closeOrder", $data);
     }
 
     /**
@@ -61,7 +61,7 @@ class BooklogStore extends BooklogApi
      */
     public function deleteStoreOrder($data)
     {
-        return $this->sendRequest("storeorder.deleteOrder", $data);
+        return $this->sendRequest("BooklogStoreOrder.deleteOrder", $data);
     }
 
     /**
@@ -72,7 +72,7 @@ class BooklogStore extends BooklogApi
      */
     public function updatePid($data)
     {
-        return $this->sendRequest("storeorder.updatePid", $data);
+        return $this->sendRequest("BooklogStoreOrder.updatePid", $data);
     }
 
     /**
@@ -83,7 +83,7 @@ class BooklogStore extends BooklogApi
      */
     public function updateItems($data)
     {
-        return $this->sendRequest("storeorder.updateItems", $data);
+        return $this->sendRequest("BooklogStoreOrder.updateItems", $data);
     }
 
     /**
@@ -94,7 +94,7 @@ class BooklogStore extends BooklogApi
      */
     public function checkItems($data)
     {
-        return $this->sendRequest("storeorder.checkItems", $data);
+        return $this->sendRequest("BooklogStoreOrder.checkItems", $data);
     }
 
     /**
@@ -105,7 +105,7 @@ class BooklogStore extends BooklogApi
      */
     public function acceptMismatch($data)
     {
-        return $this->sendRequest("storeorder.acceptMismatch", $data);
+        return $this->sendRequest("BooklogStoreOrder.acceptMismatch", $data);
     }
 
     /**
@@ -116,7 +116,7 @@ class BooklogStore extends BooklogApi
      */
     public function modifyMismatch($data)
     {
-        return $this->sendRequest("storeorder.modifyMismatch", $data);
+        return $this->sendRequest("BooklogStoreOrder.modifyMismatch", $data);
     }
 
     /**
@@ -132,7 +132,7 @@ class BooklogStore extends BooklogApi
             $reqparams = [
                 [
                     "name" => "action",
-                    "contents" => "storeorder.addDocument"
+                    "contents" => "BooklogStoreOrder.addDocument"
                 ],[
                     "name" => "data[orderid]",
                     "contents" => $orderId
@@ -161,7 +161,7 @@ class BooklogStore extends BooklogApi
             $reqparams = [
                 [
                     "name" => "action",
-                    "contents" => "storeorder.addLabel"
+                    "contents" => "BooklogStoreOrder.addLabel"
                 ],[
                     "name" => "data[orderid]",
                     "contents" => $orderId
@@ -207,7 +207,7 @@ class BooklogStore extends BooklogApi
      */
     public function addItems($data)
     {
-        return $this->sendRequest("storeorder.addItems", $data);
+        return $this->sendRequest("BooklogStoreOrder.addItems", $data);
     }
 
     /**
@@ -218,7 +218,7 @@ class BooklogStore extends BooklogApi
      */
     public function getOrderInfo($data)
     {
-        return $this->sendRequest("storeorder.getOrderInfo", $data);
+        return $this->sendRequest("BooklogStoreOrder.getOrderInfo", $data);
     }
 
     /**
@@ -229,7 +229,7 @@ class BooklogStore extends BooklogApi
      */
     public function getOrderStatus($data)
     {
-        return $this->sendRequest("storeorder.getOrderStatus", $data);
+        return $this->sendRequest("BooklogStoreOrder.getOrderStatus", $data);
     }
 
     /**
@@ -240,7 +240,7 @@ class BooklogStore extends BooklogApi
      */
     public function createClaim($data)
     {
-        return $this->sendRequest("storeorder.createClaim", $data);
+        return $this->sendRequest("BooklogStoreOrder.createClaim", $data);
     }
 
     /**
@@ -251,7 +251,7 @@ class BooklogStore extends BooklogApi
      */
     public function closeClaim($data)
     {
-        return $this->sendRequest("storeorder.closeClaim", $data);
+        return $this->sendRequest("BooklogStoreOrder.closeClaim", $data);
     }
 
     protected function sendRequest($action, $data)
