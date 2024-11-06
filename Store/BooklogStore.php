@@ -199,6 +199,18 @@ class BooklogStore extends BooklogApi
         return $this->sendRequest("product.checkStock", $data);
     }
 
+
+    /**
+     * Teljes készlet lekérdezése
+     * @param $data
+     * @return mixed
+     * @throws BooklogStoreException
+     */
+    public function checkFullStock()
+    {
+        return $this->sendRequest("product.checkFullStock", []);
+    }
+
     /**
      * Termék hozzáadása egy raktári rendeléshez
      * @param $data
